@@ -9,16 +9,21 @@ project "yaml-cpp"
 
 	files
 	{
-		"src/*.h",
-		"src/*.cpp",
+		"src/**.h",
+		"src/**.cpp",
 
-		"include/*.h"
+		"include/**.h"
 	}
 
-    includedirs
-    {
-        "include/"
-    }
+	includedirs
+	{
+		"include/"
+	}
+
+	defines
+	{
+		"YAML_CPP_STATIC_DEFINE"
+	}
 
 	filter "system:windows"
 	    systemversion "latest"
