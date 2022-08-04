@@ -2,7 +2,7 @@ project "yaml-cpp"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -17,7 +17,7 @@ project "yaml-cpp"
 
 	includedirs
 	{
-		"include/"
+		"include"
 	}
 
 	defines
